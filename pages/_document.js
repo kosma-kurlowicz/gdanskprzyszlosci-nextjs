@@ -25,7 +25,7 @@ class MyDocument extends Document {
             </Script>
         </Head>
         <body>
-            <div id="skip-to-content"><div class="skip-link-container"><a href="#main">Przejdź do treści</a></div></div>
+            <div id="skip-to-content"><div className="skip-link-container"><a href="#main">Przejdź do treści</a></div></div>
           <Main />
           <NextScript />
         </body>
