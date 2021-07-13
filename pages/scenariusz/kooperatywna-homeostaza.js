@@ -3,6 +3,7 @@ import client from "../../apollo-client"
 import Layout from '../../components/layout'
 import Head from 'next/head'
 import Link from 'next/link'
+import Script from "next/script"
 
 export default function scenariuszThree( {scenariuszinfo} ) {
     return (
@@ -12,6 +13,9 @@ export default function scenariuszThree( {scenariuszinfo} ) {
         <meta name="description" content="" />
         <link rel="icon" href="../../gp-icon.png" />
         </Head>
+        <div id="landing-page-spotec">
+          <section id="koho"></section>
+        </div>
         <main id="main">
           <article>
             <section className="block block-intro">
@@ -78,6 +82,31 @@ export default function scenariuszThree( {scenariuszinfo} ) {
             </section>
           </article>
         </main>
+        <Script>
+          {`
+                tippy('#dictionary-blockchain', {
+                  content: 'Technologia oparta na zdecentralizowanym łańcuchu bloków, za którego weryfikację odpowiedzialni są wyłącznie użytkownicy. Dzięki temu przechwytywanie danych jest prawie niemożliwe. Blockchain może być wykorzystywany we wszystkich sektorach.',
+                });
+                tippy('#dictionary-wsiowienie', {
+                  content: 'Koncepcja oparta na projektowaniu środowiskowym skoncentrowanym na budowaniu miast przyjaznych środowisku i społecznie odpowiedzialnych. Dużą uwagę przykłada się tu także do rozwoju dzielnic i ich autonomii, nie zaś do miasta jako jednego, określonego tworu.',
+                });
+                tippy('#dictionary-gornictwo-miejskie', {
+                  content: 'Metoda odzyskiwania surowców wtórnych, np. miedzi i stali z nieużywanej infrastruktury miejskiej. Nazywany też miejską kopalnią.',
+                });
+                tippy('#dictionary-agrihood', {
+                  content: 'Koncepcja zakładająca tworzenie i prowadzenie dużych przestrzeni uprawnych w mieście. Pozwala na integrację rolnictwa z dzielnicami mieszkaniowymi, częściową autonomię żywnościową miasta przy jednoczesnym wzmacnianiu relacji społecznych.',
+                });
+                tippy('#dictionary-geoinzynieria-klimatu', {
+                  content: 'Koncepcja zakładająca sztuczną modyfikację klimatu w celu odwrócenia negatywnych skutków zmian klimatycznych (np. wychwytywanie CO2 z atmosfery, zarządzanie promieniowaniem słonecznym poprzez wstrzykiwanie siarczanów do atmosfery czy technologie zapobiegające topnieniu lodowców).',
+                });
+                tippy('#dictionary-fitoplankton', {
+                  content: 'Mikroorganizmy roślinne żyjące w wodze.',
+                });
+                tippy('#dictionary-kooperatywy-mieszkaniowe', {
+                  content: 'Koncepcja współmieszkalnictwa oparta na wspólnym (w ramach jednej wspólnoty, np. przyjaciół lub osób o podobnych potrzebach lub wieku) budowaniu i zamieszkiwaniu budynków wielorodzinnych.',
+                });
+          `}
+        </Script>
         </Layout>
     )
 }

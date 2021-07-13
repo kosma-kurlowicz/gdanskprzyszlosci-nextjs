@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 
 export default function pageinfo({terminy}) {
     return (
@@ -24,10 +25,10 @@ export default function pageinfo({terminy}) {
                 <div className="column column-wide">
                   <dl>
       {terminy.map((termin) => (
-        <>
-        <dt key={termin.id}>{termin.title}</dt>
+        <div key={termin.id}>
+        <dt>{termin.title}</dt>
         <dd dangerouslySetInnerHTML={{__html: termin.content}}></dd>
-        </>
+        </div>
         ))}
                   </dl>
                 </div>

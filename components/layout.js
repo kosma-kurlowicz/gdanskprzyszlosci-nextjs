@@ -4,6 +4,20 @@ import Link from 'next/link'
 
 export default function Layout({ children }) {
     return <>
+    <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" strategy="beforeInteractive" />
+    <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" strategy="beforeInteractive" />
+    <Script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js" strategy="beforeInteractive"/>
+    <Script src="https://unpkg.com/@popperjs/core@2?ver=5.7.2" strategy="beforeInteractive" />
+    <Script src='https://unpkg.com/tippy.js@6?ver=5.7.2' strategy="beforeInteractive" />
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-RP52EB93ZV" strategy="beforeInteractive"/>
+    <Script>
+                {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-RP52EB93ZV');
+                `}
+    </Script>
     <div id="skip-to-content"><div className="skip-link-container"><a href="#main">Przejdź do treści</a></div></div>
     <button type="button" id="menu-toogle" aria-label="Zamyka i otwiera nawigację.">
       <span className="line line-long" id="lineone"></span>
@@ -65,8 +79,36 @@ export default function Layout({ children }) {
         <p><a href="https://ikm.gda.pl/" target="_blank" rel="noreferrer">Instytut Kultury Miejskiej</a> &#169; 2021</p>
       </div>
     </footer>
-      <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" />
-      <Script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js" />
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" />
+      <Script>
+            {`
+                    var menu = document.getElementById('headertop');
+                    var el = document.getElementById('menu-toogle');
+                    var lone = document.getElementById('lineone');
+                    var ltwo = document.getElementById('linetwo');
+                    var lthree = document.getElementById('linethree');
+                    var lfour = document.getElementById('linefour');
+                    menu.style.width = "0";
+                    ltwo.style.marginLeft = "0px";
+                    lthree.style.marginLeft = "0px";
+                    lfour.style.marginLeft = "0px";
+              
+                    function menuSwitcher() {
+                    if (menu.style.width == "0px") {
+                    menu.style.width = "270px";
+                    ltwo.style.marginLeft = "8px";
+                    lthree.style.marginLeft = "8px";
+                    lfour.style.marginLeft = "16px";
+                    } else {
+                    menu.style.width = "0px";
+                    ltwo.style.marginLeft = "0px";
+                    lthree.style.marginLeft = "0px";
+                    lfour.style.marginLeft = "0px";
+                    } 
+                    }
+            
+                    // Add event listener to switcher
+                    el.addEventListener("click", menuSwitcher, false);
+            `}
+          </Script>
     </>
   }

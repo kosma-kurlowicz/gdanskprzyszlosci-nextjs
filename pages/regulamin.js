@@ -29,7 +29,7 @@ export default function pageinfo( {pageinfo} ) {
                         <h2>{pageinfo.pageBy.sekcjeRegulaminu.tutulSekcjiKontakt}</h2>
                     </div>
                 </div>
-                <div clasName="column column-wide" dangerouslySetInnerHTML={{__html: pageinfo.pageBy.sekcjeRegulaminu.trescSekcjiKontakt }}>
+                <div className="column column-wide" dangerouslySetInnerHTML={{__html: pageinfo.pageBy.sekcjeRegulaminu.trescSekcjiKontakt }}>
                 </div>
             </section>
           </article>

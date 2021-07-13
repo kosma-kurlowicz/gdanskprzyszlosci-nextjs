@@ -23,7 +23,7 @@ export default function pageinfo( {pageinfo} ) {
                 </div>
                 <div className="column column-wide" dangerouslySetInnerHTML={{__html: pageinfo.pageBy.content}}></div>
             </section>
-            <section clasNames="block">
+            <section className="block">
               <div className="column column-narrow">
                 <div className="sticky"><h2>12 wyzwań dla miast w skali globalnej</h2>
                 </div>

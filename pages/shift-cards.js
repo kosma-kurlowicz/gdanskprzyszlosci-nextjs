@@ -24,7 +24,7 @@ export default function pageinfo( {pageinfo} ) {
                 <div className="column column-wide" dangerouslySetInnerHTML={{__html: pageinfo.pageBy.content}}></div>
             </section>
             <section className="block">
-                <div clasNames="column column-narrow">
+                <div className="column column-narrow">
                     <h2>Przykładowa karta</h2>
                 </div>
                 <div className="column column-wide">

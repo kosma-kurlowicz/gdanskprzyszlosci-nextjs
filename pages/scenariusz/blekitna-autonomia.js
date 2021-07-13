@@ -3,6 +3,7 @@ import client from "../../apollo-client"
 import Layout from '../../components/layout'
 import Head from 'next/head'
 import Link from 'next/link'
+import Script from "next/script"
 
 export default function scenariuszFour( {scenariuszinfo} ) {
     return (
@@ -12,6 +13,9 @@ export default function scenariuszFour( {scenariuszinfo} ) {
         <meta name="description" content="" />
         <link rel="icon" href="../../gp-icon.png" />
         </Head>
+        <div id="landing-page-spotec">
+          <section id="baut"></section>
+        </div>
         <main id="main">
           <article>
             <section className="block block-intro">
@@ -76,6 +80,28 @@ export default function scenariuszFour( {scenariuszinfo} ) {
             </section>
           </article>
         </main>
+        <Script>
+          {`
+               tippy('#dictionary-akwakultura', {
+                content: 'Hodowla ryb i owoców morza w naturalnych lub sztucznych warunkach wodnych z wykorzystaniem technik zwiększających produkcję powyżej poziomu możliwego do osiągnięcia w środowisku naturalnym.',
+               });
+               tippy('#dictionary-hydroponika', {
+                 content: 'Alternatywny sposób uprawy roślin, w którym nie wykorzystuje się ziemi, lecz granulat utrzymujący odpowiedni poziom nawodnienia.',
+               });
+               tippy('#dictionary-makroglony', {
+                 content: 'Wielokomórkowe glony, których uprawa przemysłowa daje możliwość wytwarzania biomasy wykorzystywanej jako podstawa produkcji wielu artykułów. Makroglony mogą przyczynić się do zwiększenia samowystarczalności miasta czy dzielnicy w zakresie produkcji żywności i/lub bioenergii.',
+               });
+               tippy('#dictionary-naturokultura', {
+                 content: 'Termin wprowadzony przez antropologa Bruno Latoura, który kwestionuje dualistyczny podział na naturę i kulturę. Latour podkreśla istnienie ciągłego wzajemnego przepływu natury i kultury, wskazując na naturokulturę jako obszar współdziałania i interakcji.',
+               });
+               tippy('#dictionary-internet-rzeczy', {
+                 content: 'Koncepcja zakładająca, że dzięki podłączeniu do sieci bezprzewodowej urządzenia mogą się ze sobą kontaktować i przekazywać informacje w czasie rzeczywistym, m.in. w celu poprawy doświadczeń użytkownika.',
+               });
+               tippy('#dictionary-mobilnosc-jako', {
+                 content: 'Koncepcja stawiająca pasażera w centrum doświadczeń, umożliwiając mu zaplanowanie podróży i wybranie najkorzystniejszej trasy składającej się z różnych środków transportu (np. roweru miejskiego, tramwaju, wspólnej taksówki) w ramach jednego kanału cyfrowego (np. aplikacji).',
+               });
+          `}
+        </Script>
         </Layout>
     )
 }

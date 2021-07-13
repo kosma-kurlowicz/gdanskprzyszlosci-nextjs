@@ -16,15 +16,6 @@ class MyDocument extends Document {
             <link src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" rel="stylesheet"/>
             <meta property="og:title" content="My page title" key="title" />
             <link rel="icon" href="/gp-icon.png" />
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-RP52EB93ZV"/>
-            <Script>
-                {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-RP52EB93ZV');
-                `}
-            </Script>
         </Head>
         <body>
           <Main />
