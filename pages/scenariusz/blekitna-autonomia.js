@@ -14,7 +14,7 @@ export default function scenariuszFour( {scenariuszinfo} ) {
         <link rel="icon" href="../../gp-icon.png" />
         </Head>
         <div id="landing-page-spotec">
-          <section id="baut"></section>
+          <section id="spotec"></section>
         </div>
         <main id="main">
           <article>
@@ -80,6 +80,57 @@ export default function scenariuszFour( {scenariuszinfo} ) {
             </section>
           </article>
         </main>
+        <Script>
+          {`
+                    var section = document.querySelector('#spotec');
+                    var scene = new THREE.Scene(); 
+                    var camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 1000 );
+                    var renderer = new THREE.WebGLRenderer({
+                      alpha: true,
+                      antialias: true,
+                    }); 
+                    renderer.setSize( window.innerWidth, window.innerHeight ); 
+                    section.appendChild(renderer.domElement);
+                  
+                    var loader = new THREE.TextureLoader();
+                    var geometry = new THREE.PlaneGeometry(1, 1, 50, 50);
+                  
+                    var material = new THREE.MeshBasicMaterial({
+                      // color: 0xE69A12,
+                      // wireframe: true
+                      map: loader.load("https://gps.chaocos.online/webp/blob-rainbow-4-600x600.webp")
+                    });
+                  
+                    var flag = new THREE.Mesh(geometry, material);
+                    scene.add(flag);
+                    camera.position.z = 1;
+                    camera.position.x = 0;
+                    camera.position.y = 0;
+                  
+                    var clock = new THREE.Clock();
+                  
+                  function animate(){
+                    const time = clock.getElapsedTime();
+                    
+                    flag.geometry.vertices.map(v => {
+                      const waveX1 = 0.004 * Math.cos(v.x * 6 + time/2);
+                      const waveX2 = 0.004 * Math.sin(v.x * 1.2 + time/2);
+                      const waveY1 = 0.004 * Math.sin(v.y * 6 + time/2);
+                      
+                      v.z = (waveX1 * 6) - waveX2 + (waveY1 * 6);
+                  
+                      flag.rotation.z += 0.00000002;
+                    })
+                    
+                    flag.geometry.verticesNeedUpdate = true;
+                    
+                    requestAnimationFrame(animate);
+                    renderer.render(scene, camera);
+                  }
+                  
+                  animate();
+          `}
+        </Script>
         <Script>
           {`
                tippy('#dictionary-akwakultura', {

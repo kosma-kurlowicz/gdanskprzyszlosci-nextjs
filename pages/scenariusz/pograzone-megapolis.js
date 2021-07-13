@@ -14,7 +14,7 @@ export default function scenariuszTwo( {scenariuszinfo} ) {
         <link rel="icon" href="../../gp-icon.png" />
         </Head>
         <div id="landing-page-spotec">
-          <section id="spoma"></section>
+          <section id="spotec"></section>
         </div>
         <main id="main">
           <article>
@@ -83,7 +83,7 @@ export default function scenariuszTwo( {scenariuszinfo} ) {
         </main>
         <Script>
           {`
-                          let sectionpoma = document.querySelector('#spoma');
+                          var sectionpoma = document.querySelector('#spotec');
                           var scene = new THREE.Scene(); 
                           var camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 1000 );
                           var renderer = new THREE.WebGLRenderer({
@@ -93,7 +93,7 @@ export default function scenariuszTwo( {scenariuszinfo} ) {
                           renderer.setSize( window.innerWidth, window.innerHeight ); 
                           sectionpoma.appendChild(renderer.domElement);
                         
-                          let loaderpoma = new THREE.TextureLoader();
+                          var loaderpoma = new THREE.TextureLoader();
                           var geometry = new THREE.PlaneGeometry(1, 1, 50, 50);
                         
                           var material = new THREE.MeshBasicMaterial({
@@ -108,7 +108,7 @@ export default function scenariuszTwo( {scenariuszinfo} ) {
                           camera.position.x = 0;
                           camera.position.y = 0;
                         
-                          let clockpoma = new THREE.Clock();
+                          var clockpoma = new THREE.Clock();
                         
                         function animate(){
                           const time = clockpoma.getElapsedTime();

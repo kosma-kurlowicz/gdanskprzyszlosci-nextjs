@@ -81,7 +81,7 @@ export default function scenariuszOne( {scenariuszinfo} ) {
         </main>
         <Script>
           {`
-                let section = document.querySelector('#spotec');
+                var section = document.querySelector('#spotec');
                 var scene = new THREE.Scene(); 
                 var camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 1000 );
                 var renderer = new THREE.WebGLRenderer({
@@ -91,7 +91,7 @@ export default function scenariuszOne( {scenariuszinfo} ) {
                 renderer.setSize( window.innerWidth, window.innerHeight ); 
                 section.appendChild(renderer.domElement);
               
-                let loader = new THREE.TextureLoader();
+                var loader = new THREE.TextureLoader();
                 var geometry = new THREE.PlaneGeometry(1, 1, 50, 50);
               
                 var material = new THREE.MeshBasicMaterial({
@@ -106,7 +106,7 @@ export default function scenariuszOne( {scenariuszinfo} ) {
                 camera.position.x = 0;
                 camera.position.y = 0;
               
-                let clock = new THREE.Clock();
+                var clock = new THREE.Clock();
               
               function animate(){
                 const time = clock.getElapsedTime();
