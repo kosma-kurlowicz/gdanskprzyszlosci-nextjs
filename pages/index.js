@@ -9,7 +9,6 @@ export default function Home({frontinfo}) {
       <Head>
         <title>{frontinfo.generalSettings.title}</title>
         <meta name="description" content={frontinfo.generalSettings.description} />
-        <link rel="icon" href="/gp-icon.png" />
       </Head>
 
       <main>
