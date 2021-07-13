@@ -817,7 +817,7 @@ main {
 }
 
 #scenariusze-przyszlosci .card a:hover, #scenariusze-przyszlosci .card a:focus {
-  background-color: var(--main-yellow);
+  background-color: var(--main-font-color);
   color: var(--main-bg-color);
 }
 

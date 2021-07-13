@@ -6,7 +6,6 @@ export default function Layout({ children }) {
     return <>
     <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" strategy="beforeInteractive" />
     <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" strategy="beforeInteractive" />
-    <Script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js" strategy="beforeInteractive"/>
     <Script src="https://unpkg.com/@popperjs/core@2?ver=5.7.2" strategy="beforeInteractive" />
     <Script src='https://unpkg.com/tippy.js@6?ver=5.7.2' strategy="beforeInteractive" />
     <Script src="https://www.googletagmanager.com/gtag/js?id=G-RP52EB93ZV" strategy="beforeInteractive"/>
