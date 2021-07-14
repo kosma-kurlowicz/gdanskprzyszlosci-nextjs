@@ -110,7 +110,7 @@ export default function scenariuszFour( {scenariuszinfo} ) {
                     var clock = new THREE.Clock();
                   
                   function animate(){
-                    const time = clock.getElapsedTime();
+                    var time = clock.getElapsedTime();
                     
                     flag.geometry.vertices.map(v => {
                       const waveX1 = 0.004 * Math.cos(v.x * 6 + time/2);
