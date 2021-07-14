@@ -385,9 +385,19 @@ flex-direction: column;
 justify-content: space-between;
 }
 
+#gps-logo-menu-container {
+  margin-left: 2rem;
+}
+
 #gps-logo-intro {
   padding: 0;
   margin: 2rem 0rem 0rem 0rem;
+}
+
+#gps-logo-footer {
+  padding: 0;
+  width: 120px!important;
+  height: 120px!important;
 }
 
 #landing-page-abovetf {

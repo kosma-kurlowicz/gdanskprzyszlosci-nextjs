@@ -27,7 +27,9 @@ export default function Layout({ children }) {
     <header id="headertop">
       <div id="header-menu-container">
         <div>
-          <Link href="/"><a className="image-link" aria-label="Strona główna."><Image src="/svg/gdansk-przyszlosci-logo-dark.svg" alt="" width={160} height={160} id="gps-logo-menu" /></a></Link>
+          <div id="gps-logo-menu-container">
+            <Link href="/"><a className="image-link" aria-label="Strona główna."><Image src="/svg/gdansk-przyszlosci-logo-dark.svg" alt="" width={160} height={160} id="gps-logo-menu" /></a></Link>
+          </div>
           <nav id="header-vertical-menu">
             <ul>
               <li><Link href="/#scenariusze-przyszlosci"><a target="_self">Scenariusze Przyszłości</a></Link>
@@ -57,7 +59,9 @@ export default function Layout({ children }) {
     </div>
     <footer>
       <div id="footer-meritorical">
-      <Image src="/svg/gdansk-przyszlosci-logo-dark.svg" alt="" width={120} height={120} className="logo" />
+        <div>
+          <Image src="/svg/gdansk-przyszlosci-logo-dark-120x120.svg" alt="" width={120} height={120} className="logo" id="gps-logo-footer" />
+        </div>
         <div id="footer-navigation">
           <nav>
             <ul>
