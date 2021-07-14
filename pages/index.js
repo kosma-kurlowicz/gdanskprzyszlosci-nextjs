@@ -144,6 +144,24 @@ export default function Home({frontinfo}) {
           </section>
         </article>
       </main>
+      <script src="/js/whiteblob.js" defer></script>
+      <Script id="vertexShader" type="x-shader/x-vertex">
+        {`
+        attribute vec4 a_position;
+      
+        uniform mat4 u_modelViewMatrix;
+        uniform mat4 u_projectionMatrix;
+        
+        void main() {
+          gl_Position = a_position;
+        }
+        `}
+      </Script>
+      <Script id="fragmentShader" type="x-shader/x-fragment">
+        {`
+
+        `}
+      </Script>
       <Script>
         {`
   var section = document.querySelector('#flag');
